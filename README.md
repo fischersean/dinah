@@ -50,7 +50,7 @@ import (
 
 func main(){
   
-    people, err := PeopleFromCsv("cwickpeople.csv")
+    people, err := chadwick.PeopleFromCsv("cwickpeople.csv")
 
     if err != nil {
         panic(err)
