@@ -2,6 +2,8 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/fischersean/dinah)](https://goreportcard.com/badge/github.com/fischersean/dinah)
 
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/fischersean/dinah)](https://pkg.go.dev/github.com/fischersean/dinah)
+
  The Dinah package provides data structures and fetch functionality for MLB's Statcast and Chadwick's Register datasets.
 
 ## Installation
