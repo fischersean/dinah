@@ -12,7 +12,7 @@ type Person struct {
 	KeyBbref        string `csv:"key_bbref"`
 	KeyBbrefMinors  string `csv:"key_bbref_minors"`
 	KeyFangraphs    int    `csv:"key_fangraphs"`
-	KeyNpb          string    `csv:"key_npb"`
+	KeyNpb          string `csv:"key_npb"`
 	KeySrNfl        string `csv:"key_sr_nfl"`
 	KeySrNba        string `csv:"key_sr_nba"`
 	KeySrNhl        string `csv:"key_sr_nhl"`

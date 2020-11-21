@@ -155,25 +155,25 @@ func FromCsv(r io.Reader) (ds Dataset, err error) {
 
 //// FromHttp downloads and parses a Statcast dataset spanning the states d0 and d1
 //func SeasonFromHttp(season int) (ds Dataset, err error) {
-	//ds.Pitches, err = downloadStatcastSeason(season)
+//ds.Pitches, err = downloadStatcastSeason(season)
 
-	//if err != nil {
-		//return ds, err
-	//}
+//if err != nil {
+//return ds, err
+//}
 
-	//ds.DateBegin, err = findMinDate(ds.Pitches)
+//ds.DateBegin, err = findMinDate(ds.Pitches)
 
-	//if err != nil {
-		//return ds, err
-	//}
+//if err != nil {
+//return ds, err
+//}
 
-	//ds.DateEnd, err = findMaxDate(ds.Pitches)
+//ds.DateEnd, err = findMaxDate(ds.Pitches)
 
-	//if err != nil {
-		//return ds, err
-	//}
+//if err != nil {
+//return ds, err
+//}
 
-	//return ds, nil
+//return ds, nil
 //}
 
 // FromHttp downloads and parses a Statcast dataset spanning the states d0 and d1

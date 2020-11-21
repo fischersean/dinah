@@ -1,4 +1,4 @@
-.PHONY: test fmt showcover lint
+.PHONY: test fmt showcover lint 
 
 test:
 	@make lint && go test -v -coverprofile cp.out ./...

@@ -7,15 +7,15 @@ import (
 )
 
 //func TestSeasonFromHttp(t *testing.T) {
-	//ds, err := SeasonFromHttp(2020)
+//ds, err := SeasonFromHttp(2020)
 
-	//if err != nil {
-		//t.Fatalf(err.Error())
-	//}
+//if err != nil {
+//t.Fatalf(err.Error())
+//}
 
-	//if len(ds.Pitches) == 0 {
-		//t.Fatalf("No pitch data found")
-	//}
+//if len(ds.Pitches) == 0 {
+//t.Fatalf("No pitch data found")
+//}
 //}
 
 func TestFromHttp(t *testing.T) {

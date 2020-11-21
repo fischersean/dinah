@@ -45,7 +45,7 @@ func parseDate(dstring string) (d time.Time, err error) {
 
 }
 
-// Read returns a single recrod from a statcast dataset
+// Read returns a single record from a statcast dataset
 func (sr *CSVReader) Read() (retSlice []string, err error) {
 
 	retSlice, err = sr.stdReader.Read()
