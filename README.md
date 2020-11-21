@@ -14,23 +14,24 @@ Consider we wanted to download pitch by pitch Statcast data for the month of Sep
 package main
 
 import (
-  "fmt"
-  "time"
-	"github.com/fischersean/dianh/statcast"
+    "fmt"
+    "time"
+    "github.com/fischersean/dianh/statcast"
 )
 
 func main(){
   
-  d0 := time.Date(2020, time.September, 1, 0, 0, 0, 0, time.UTC)
-	d1 := time.Date(2020, time.September, 30, 0, 0, 0, 0, time.UTC)
+    d0 := time.Date(2020, time.September, 1, 0, 0, 0, 0, time.UTC)
+    d1 := time.Date(2020, time.September, 30, 0, 0, 0, 0, time.UTC)
 
-	ds, err := statcast.FromHttp(d0, d1)
+    ds, err := statcast.FromHttp(d0, d1)
   
-  if err != nil {
-    panic(err)
-  }
+    if err != nil {
+        panic(err)
+    }
   
-  fmt.Println("%#v\n", ds)
+    fmt.Println("%#v\n", ds)
+
 }
 ```
 
@@ -40,20 +41,20 @@ If we wanted to patch up the MLBAM id's for the players within the Statcast data
 package main
 
 import (
-  "fmt"
-  "time"
-	"github.com/fischersean/dianh/chadwick"
+    "fmt"
+    "time"
+    "github.com/fischersean/dianh/chadwick"
 )
 
 func main(){
   
-  people, err := PeopleFromCsv("cwickpeople.csv")
+    people, err := PeopleFromCsv("cwickpeople.csv")
 
-  if err != nil {
-    panic(err)
-  }
+    if err != nil {
+        panic(err)
+    }
   
-  fmt.Println("%#v\n", people)
+    fmt.Println("%#v\n", people)
   
 }
 ```
