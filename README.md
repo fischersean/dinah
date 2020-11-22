@@ -18,7 +18,7 @@ package main
 import (
     "fmt"
     "time"
-    "github.com/fischersean/dianh/statcast"
+    "github.com/fischersean/dinah/statcast"
 )
 
 func main(){
@@ -37,7 +37,7 @@ func main(){
 }
 ```
 
-If we wanted to patch up the MLBAM id's for the players within the Statcast data, we could pull the mapping from Chadwick's people register. It's recommended to use a local file for this. The full dataset is 45+MB and my dramatically slow execution time.
+If we wanted to patch up the MLBAM id's for the players within the Statcast data, we could pull the mapping from Chadwick's people register. It's recommended to use a local file for this. The full dataset is 45+MB and may dramatically slow execution time.
 
 ```go
 package main
@@ -45,7 +45,7 @@ package main
 import (
     "fmt"
     "time"
-    "github.com/fischersean/dianh/chadwick"
+    "github.com/fischersean/dinah/chadwick"
 )
 
 func main(){
