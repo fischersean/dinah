@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type CSVReader struct {
+type csvReader struct {
 	stdReader *csv.Reader
 }
 
@@ -46,7 +46,7 @@ func parseDate(dstring string) (d time.Time, err error) {
 }
 
 // Read returns a single record from a statcast dataset
-func (sr *CSVReader) Read() (retSlice []string, err error) {
+func (sr *csvReader) Read() (retSlice []string, err error) {
 
 	retSlice, err = sr.stdReader.Read()
 
@@ -65,7 +65,7 @@ func (sr *CSVReader) Read() (retSlice []string, err error) {
 }
 
 // ReadAll reads all records from a statcast csv dataset
-func (sr *CSVReader) ReadAll() (retSlice [][]string, err error) {
+func (sr *csvReader) ReadAll() (retSlice [][]string, err error) {
 
 	for {
 		tmpSlice, err := sr.Read()
@@ -85,10 +85,10 @@ func (sr *CSVReader) ReadAll() (retSlice [][]string, err error) {
 
 }
 
-func newCSVReader(r io.Reader) *CSVReader {
+func newCSVReader(r io.Reader) *csvReader {
 
 	csvread := csv.NewReader(r)
-	return &CSVReader{
+	return &csvReader{
 		stdReader: csvread,
 	}
 

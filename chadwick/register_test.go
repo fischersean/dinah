@@ -39,6 +39,9 @@ func TestFromHttp(t *testing.T) {
 		t.Fatalf("Count in sample not expected: %d", len(c))
 	}
 
+	oldUrl := peopleRegister
+
+	peopleRegister = "https://raw.githubusercontent.com/fischersean/dinah/main/resources/cwickpeopletest.csv"
 	//t.SkipNow() // We already know this works so we'll skipp to prevent downloading 45+MB file
 	p, err := PeopleFromHttp()
 
@@ -49,5 +52,7 @@ func TestFromHttp(t *testing.T) {
 	if len(p) == 0 {
 		t.Fatalf("Count in sample not expected: %d", len(p))
 	}
+
+	peopleRegister = oldUrl
 
 }

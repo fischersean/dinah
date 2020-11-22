@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Pitch is the struct representation of a single pitch recorded by MLB's statcast system
 type Pitch struct {
 	PitchType                    string    `csv:"pitch_type"`
 	RawGameDate                  string    `csv:"game_date"`
@@ -91,6 +92,7 @@ type Pitch struct {
 	OfFieldingAlignment          string    `csv:"of_fielding_alignment"`
 }
 
+// Dataset ccontains a slice of pitches as well as the min and max date contained within the pitch slice
 type Dataset struct {
 	Pitches   []Pitch
 	DateBegin time.Time

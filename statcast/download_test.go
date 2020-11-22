@@ -20,6 +20,7 @@ func TestDownloadScRange(t *testing.T) {
 	}
 
 }
+
 func TestDownloadScDay(t *testing.T) {
 	d0 := time.Date(2020, time.July, 23, 23, 0, 0, 0, time.UTC)
 	b, err := downloadStatcastDay(d0)
@@ -32,7 +33,18 @@ func TestDownloadScDay(t *testing.T) {
 		t.Fatalf("No pitches found")
 	}
 
-	//t.Logf("%+v", b[1:5])
+	d1 := time.Date(2020, time.February, 23, 23, 0, 0, 0, time.UTC)
+	b, err = downloadStatcastDay(d1)
+
+	if err != nil {
+		t.Fatalf(err.Error())
+	}
+
+	if len(b) != 0 {
+		t.Fatalf("Pitches found in day where no games played")
+	}
+
+	//t.Logf("%+v", b)
 
 }
 
