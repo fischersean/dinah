@@ -4,6 +4,7 @@ import (
 	"os"
 )
 
+// Person is the struct representation of a single person as represented in the Chadwick register
 type Person struct {
 	KeyPerson       string `csv:"key_person"`
 	KeyUuid         string `csv:"key_uuid"`
@@ -47,6 +48,7 @@ type Person struct {
 	MlbUmpiredLast  int    `csv:"mlb_umpired_last"`
 }
 
+// Country is the struct representation of a country as represented in the Chadwick register
 type Country struct {
 	KeyIsoAlpha2 string `csv:"key_iso_alpha2"`
 	KeyIsoAlpha3 string `csv:"key_iso_alpha3"`
