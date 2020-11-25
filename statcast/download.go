@@ -44,7 +44,6 @@ func downloadStatcastDay(d time.Time) (pitches []Pitch, err error) {
 
 	r := res.Body
 
-
 	pitches, err = marshalPitches(r)
 
 	if err != nil {
