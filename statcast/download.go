@@ -1,7 +1,7 @@
 package statcast
 
 import (
-	"github.com/fischersean/dinah/common"
+	"net/http"
 	"net/url"
 	"time"
 )
@@ -36,11 +36,14 @@ func downloadStatcastDay(d time.Time) (pitches []Pitch, err error) {
 
 	url := constructUrl(d, d)
 
-	r, err := common.DownloadFileUrl(url)
+	res, err := http.Get(url)
 
 	if err != nil {
 		return nil, err
 	}
+
+	r := res.Body
+
 
 	pitches, err = marshalPitches(r)
 

@@ -1,7 +1,7 @@
 package chadwick
 
 import (
-	"github.com/fischersean/dinah/common"
+	"net/http"
 )
 
 var peopleRegister = "https://raw.githubusercontent.com/chadwickbureau/register/master/data/people.csv"
@@ -9,13 +9,14 @@ var peopleRegister = "https://raw.githubusercontent.com/chadwickbureau/register/
 var countryRegister = "https://raw.githubusercontent.com/chadwickbureau/register/master/data/names.csv"
 
 func downloadPeopleRegister() (p []Person, err error) {
-	r, err := common.DownloadFileUrl(peopleRegister)
+
+	res, err := http.Get(peopleRegister)
 
 	if err != nil {
-		return p, err
+		return nil, err
 	}
 
-	p, err = marshalPeople(r)
+	p, err = marshalPeople(res.Body)
 
 	if err != nil {
 		return p, err
@@ -25,13 +26,14 @@ func downloadPeopleRegister() (p []Person, err error) {
 }
 
 func downloadCountryRegister() (c []Country, err error) {
-	r, err := common.DownloadFileUrl(countryRegister)
+
+	res, err := http.Get(countryRegister)
 
 	if err != nil {
-		return c, err
+		return nil, err
 	}
 
-	c, err = marshalContries(r)
+	c, err = marshalContries(res.Body)
 
 	if err != nil {
 		return c, err
