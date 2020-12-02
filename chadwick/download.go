@@ -16,6 +16,8 @@ func downloadPeopleRegister() (p []Person, err error) {
 		return nil, err
 	}
 
+	defer res.Body.Close()
+
 	p, err = marshalPeople(res.Body)
 
 	if err != nil {
